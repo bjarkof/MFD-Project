@@ -1,0 +1,9 @@
+<p>Total cost {{totalCost(recipes) | currency:'EUR':true}}</p>
+    <ul>
+        <li *ngFor="let recipe of recipes">
+        <h2>{{recipe.recipe | uppercase}}</h2>
+            <p>Estimated cost: {{recipe.estimated_cost | currency:'EUR':true}}</p>
+        <p *ngIf="recipe.cookTime < 5">Quick recipe!</p>
+        <button [routerLink]="['/detail', recipe.id]">View details</button>
+        </li>
+    </ul>
