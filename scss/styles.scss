@@ -1,0 +1,115 @@
+// Third-party
+@import "vendor/bootstrap.min";
+@import "../bower_components/font-awesome/scss/font-awesome";
+@import "../bower_components/slick-carousel/slick/slick.scss";
+
+
+
+// Modules and variables
+@import "modules/utility";
+@import "modules/colors";
+@import "modules/buttons";
+
+// partials
+@import "partials/base";
+@import "partials/typography";
+
+// Layout
+@import "layout/header";
+@import "layout/footer";
+@import "layout/slider";
+@import "layout/product-categories";
+@import "layout/spc-products";
+@import "layout/filter";
+@import "layout/product-details";
+@import "layout/product-tabs";
+
+*{
+  outline: none;
+  &::selection{
+    background: $red;
+    color: #333333;
+  }
+}
+
+html, html a {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+
+body{
+  background-color: $grey;
+}
+
+a{
+  cursor: pointer;
+  color: $red;
+  transition: 0.2s;
+}
+
+a:focus, a:hover{
+  text-decoration: none;
+  outline: none;
+  color: #9c0307;
+
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.img-center{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-fluid{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+// Flex-box classes
+.flex{
+  display: flex;
+}
+
+.flex-end{
+  justify-content: flex-end;
+}
+
+.flex-column{
+  flex-direction: column;
+}
+
+.flex-center{
+  justify-content: center;
+}
+
+// Helper classes
+
+@media screen and (max-width: 768px) {
+  .hidden-xs{
+  display: none;
+  }
+}
+
+
+
+.uppercase{
+  text-transform: uppercase;
+}
+
+.underline{
+  text-decoration: underline;
+}
+
+.red-text{
+  color: $red;
+}
+
+.light{
+  font-weight: 300;
+}

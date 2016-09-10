@@ -1,4 +1,5 @@
 import { Recipe } from './recipe';
+import { Product } from './product';
 
 export const RECIPEDATA:Recipe[] = [{
         "id" : 1,
@@ -14,3 +15,124 @@ export const RECIPEDATA:Recipe[] = [{
         "prep_time" : 20,        
         "estimated_cost" : 25
     }]
+
+export const PRODUCTSDATA:Product[] = [{
+    "id": 1,
+    "name": "Nike Roshe Run Premium Holiday",
+    "description": "det er en god sko",
+    "details": "jajajajajaja",
+    "features": "nejenejenej",
+    "sizes": ["S", "M", "L"],
+    "rating": 5,
+    "price": 109.90,
+    "salepercent": 25,
+    "on_sale": true,
+    "images": ["images/products/nike.jpg", "somesrc2"],
+    "brand": "images/brandlogos/nike.jpg",
+    "on_stock": 50
+},
+{
+    "id": 2,
+    "name": "The best Adidas shoe in the whole world",
+    "description": "det er en god sko",
+    "details": "jajajajajaja",
+    "features": "nejenejenej",
+    "sizes": ["S", "M", "L"],
+    "rating": 5,
+    "price": 200.51,
+    "salepercent": 25,
+    "on_sale": true,
+    "images": ["images/products/nike.jpg", "somesrc2"],
+    "brand": "images/brandlogos/nike.jpg",
+    "on_stock": 50
+},
+{
+    "id": 3,
+    "name": "The best Adidas shoe in the whole world",
+    "description": "det er en god sko",
+    "details": "jajajajajaja",
+    "features": "nejenejenej",
+    "sizes": ["S", "M", "L"],
+    "rating": 5,
+    "price": 200.51,
+    "salepercent": 25,
+    "on_sale": true,
+    "images": ["images/products/nike.jpg", "somesrc2"],
+    "brand": "images/brandlogos/nike.jpg",
+    "on_stock": 50
+},
+{
+    "id": 4,
+    "name": "The best Adidas shoe in the whole world",
+    "description": "det er en god sko",
+    "details": "jajajajajaja",
+    "features": "nejenejenej",
+    "sizes": ["S", "M", "L"],
+    "rating": 5,
+    "price": 200.51,
+    "salepercent": 25,
+    "on_sale": true,
+    "images": ["images/products/nike.jpg", "somesrc2"],
+    "brand": "images/brandlogos/nike.jpg",
+    "on_stock": 50
+},
+{
+    "id": 5,
+    "name": "The best Adidas shoe in the whole world",
+    "description": "det er en god sko",
+    "details": "jajajajajaja",
+    "features": "nejenejenej",
+    "sizes": ["S", "M", "L"],
+    "rating": 5,
+    "price": 200.51,
+    "salepercent": 25,
+    "on_sale": true,
+    "images": ["images/products/nike.jpg", "somesrc2"],
+    "brand": "images/brandlogos/nike.jpg",
+    "on_stock": 50
+},
+{
+    "id": 6,
+    "name": "The best Adidas shoe in the whole world",
+    "description": "det er en god sko",
+    "details": "jajajajajaja",
+    "features": "nejenejenej",
+    "sizes": ["S", "M", "L"],
+    "rating": 5,
+    "price": 200.51,
+    "salepercent": 25,
+    "on_sale": true,
+    "images": ["images/products/nike.jpg", "somesrc2"],
+    "brand": "images/brandlogos/nike.jpg",
+    "on_stock": 50
+},
+{
+    "id": 7,
+    "name": "The best Adidas shoe in the whole world",
+    "description": "det er en god sko",
+    "details": "jajajajajaja",
+    "features": "nejenejenej",
+    "sizes": ["S", "M", "L"],
+    "rating": 5,
+    "price": 200.51,
+    "salepercent": 25,
+    "on_sale": true,
+    "images": ["images/products/nike.jpg", "somesrc2"],
+    "brand": "images/brandlogos/nike.jpg",
+    "on_stock": 50
+},
+{
+    "id": 8,
+    "name": "The best Adidas shoe in the whole world",
+    "description": "det er en god sko",
+    "details": "jajajajajaja",
+    "features": "nejenejenej",
+    "sizes": ["S", "M", "L"],
+    "rating": 5,
+    "price": 200.51,
+    "salepercent": 25,
+    "on_sale": true,
+    "images": ["images/products/nike.jpg", "somesrc2"],
+    "brand": "images/brandlogos/nike.jpg",
+    "on_stock": 50
+}]

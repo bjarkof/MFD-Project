@@ -1,10 +1,10 @@
 jQuery.noConflict();
 
-jQuery(document).ready(function( $ ){
+jQuery('document').ready(function( $ ){
 
 /// RESPONSIVE MENU ///
 console.log("hej");
-  $('.menutoggle').on('click', function(){
+  $('body').on('click', '.menutoggle', function(){
    $('.menu').slideToggle(200);
   });
   $(window).resize(function(){

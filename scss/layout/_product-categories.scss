@@ -1,0 +1,53 @@
+#categories{
+  margin-bottom: 54px;
+}
+
+.product-cat{
+  background-color: $white;
+  border: 1px solid #dcdcdc;
+  text-align: center;
+}
+
+.cat-name, .total, .prod-amount{
+  font-family: $secondary-font;
+  font-weight: 300;
+  text-transform: uppercase;
+
+}
+
+.cat-name{
+  @include font-size(40.46px);
+  margin: 20px 0px 0px 0px;
+}
+
+.total{
+  @include font-size(25.29px);
+  color: $red;
+  margin: 0px;
+}
+
+.cat-img{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 178px;
+  width: 100%;
+  border: 7px solid rgba(172, 162, 162, 0.14);
+  border-radius: 100px;
+  margin-bottom: 7px;
+    &:hover{
+      filter:blur(1px);
+    }
+}
+
+.prod-amount{
+  @include font-size(15.17px);
+  margin: -8px 0px 5px 0px;
+
+}
+
+.list-icon{
+  width: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 12px;
+}

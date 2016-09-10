@@ -1,0 +1,23 @@
+$primary-font: Arial, Helvetica, sans-serif;
+$secondary-font: 'Source Sans Pro', Arial, sans-serif;
+
+html{
+  font-size: 16px;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: $secondary-font;
+}
+
+body{
+  font-family: $primary-font;
+}
+
+h1{
+  @include font-size(34px);
+  font-weight: normal;
+}
+
+button{
+  font-family: $secondary-font;
+}

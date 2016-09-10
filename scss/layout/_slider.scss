@@ -1,0 +1,79 @@
+.slider{
+  height: 538px;
+  margin-top: -53px;
+  // position: absolute;
+  text-transform: uppercase;
+  margin-bottom: 45px;
+}
+
+.slick-arrow{
+  background: none;
+  background-color: rgba(225, 221, 215, 0.74);
+  color: #52533f;
+  padding: 12px 16px;
+  border-radius: 5000px;
+  @include font-size(28px);
+  border: 7px solid #5c5a5a;
+  position: absolute;
+  top: 40%;
+}
+
+.slick-prev.slick-arrow {
+    left: 10px;
+    z-index: 1;
+}
+
+.slick-next.slick-arrow {
+    right: 10px;
+    z-index: 1;
+}
+
+// .slick-slide{
+//   position: relative;
+//   img{
+//     position: absolute;
+//   }
+// }
+
+.slidewrap{
+  width: 100%;
+  max-width: 970px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  height: 100%;
+  padding-left: 70px;
+  .row{
+    width: 100%;
+  }
+  div{
+    display: inherit;
+  }
+}
+
+.black-slide-heading{
+  font-family: $secondary-font;
+  @include font-size(110px);
+  line-height: 100px;
+  font-weight: 700;
+  color: $black;
+}
+
+.white-slide-heading{
+  font-family: $secondary-font;
+  @include font-size(68px);
+  color: $white;
+  line-height: 68px;
+  margin-bottom: 20px;
+}
+
+// Slide1
+.slide1{
+  background-color: #9ccd8d;
+}
+
+.shoe-img{
+  right: 5%;
+  bottom: 0%;
+  align-self: flex-end;
+}

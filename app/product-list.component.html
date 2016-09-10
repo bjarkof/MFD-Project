@@ -1,0 +1,25 @@
+<div class="container">
+    <section id="spc-products">
+        <div class="row flex">
+            <div class="col-md-6">
+                <p class="heading">Special <span class="red-text">products</span></p>
+            </div>
+            <div class="col-md-6 flex flex-end"><a href="#" class="view-all"><i class="fa fa-caret-right" aria-hidden="true"></i> view all products</a></div>
+        </div>
+        <div class="row">
+            <div *ngFor="let product of products" class="col-xs-6 col-sm-3">
+                <div class="product">
+                    <img src="{{product.brand}}" alt="brand">
+                    <div class="image">
+                        <a href="#"><img class="product-img" src="{{product.images[0]}}" alt="product"></a>
+                    </div>
+                    <a href="#" class="desc">{{product.name}}</a>
+                    <div class="price">
+                        <button href="#" class="bevel price-amt">{{product.price | currency:'USD':true}}</button>
+                        <button href="#" class="bevel price-btn">Get now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

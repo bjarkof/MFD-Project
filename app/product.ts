@@ -9,7 +9,6 @@ export class Product{
     price: number;
     salepercent: number;
     on_sale: boolean;
-    shipping: number;
     images: string[];
     brand: string;
     on_stock: number;

@@ -1,0 +1,11 @@
+// Returns font-size on BOTH rem and px, so rem is only used if supported
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
