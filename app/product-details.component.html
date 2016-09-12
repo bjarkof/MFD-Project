@@ -1,4 +1,201 @@
 <div *ngIf="products">
-    <h1>{{products.name}}</h1>
-    <p>{{products.price}}</p>
+    <div class="container">
+        <section id="#filter">
+            <div class="tab">Filter</div>
+            <div class="filter">
+
+                <div class="row">
+                    <div class="col-xs-3 brands">
+                        <p class="brands-txt">Brands</p>
+                        <div class="row">
+                            <div class="col-xs-7 col-1">
+                                <ul>
+                                    <li><a href="#">adidas</a></li>
+                                    <li><a href="#">nike</a></li>
+                                    <li><a href="#">camper</a></li>
+                                    <li><a href="#">superga</a></li>
+                                    <li><a href="#">timberland</a></li>
+                                    <li><a href="#">new balance</a></li>
+                                    <li><a href="#">converse</a></li>
+                                    <li><a href="#">puma</a></li>
+                                    <li><a href="#">kinetix</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-5 col-2">
+                                <ul>
+                                    <li><a href="#">tiger</a></li>
+                                    <li><a href="#">lacoste</a></li>
+                                    <li><a href="#">reebok</a></li>
+                                    <li><a href="#">cat</a></li>
+                                    <li><a href="#">dockers</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <div class="product-cat">
+                                    <p class="cat-name">Woman</p>
+                                    <a href="#"><img class="cat-img" src="http://placehold.it/300x300" alt="Woman"></a>
+                                    <p class="total">Total</p>
+                                    <p class="prod-amount">357 Products</p>
+                                    <a href="#"><img class="list-icon" src="images/list.svg" alt="List"></a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="product-cat">
+                                    <p class="cat-name">Man</p>
+                                    <a href="#"><img class="cat-img" src="http://placehold.it/300x300" alt="Man"></a>
+                                    <p class="total">Total</p>
+                                    <p class="prod-amount">416 Products</p>
+                                    <a href="#"><img class="list-icon" src="images/list.svg" alt="List"></a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="product-cat">
+                                    <p class="cat-name">Cats</p>
+                                    <a href="#"><img class="cat-img" src="http://placehold.it/300x300" alt="Kids"></a>
+                                    <p class="total">Total</p>
+                                    <p class="prod-amount">232 Products</p>
+                                    <a href="#"><img class="list-icon" src="images/list.svg" alt="List"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3 pricefilter">
+                        <p>Select color</p>
+
+                        <p>Price range</p>
+
+                        <div id="slider-range"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="container">
+        <section id="prod-details">
+            <h1>Men's Footwear</h1>
+            <p class="subheading">{{products.name}}</p>
+            <div class="row">
+                <div class="detail-gallery col-sm-6">
+                    <div class="prodimg">
+                        <img class="img-center big-prod-image" src="{{products.images[0]}}" alt="Product image">
+                        <img class="img-center brand-img" src="{{products.brand}}" alt="brand">
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-4"><img class="img-center thumbnail select-img" src="{{products.images[0]}}" alt="thumbnail"></div>
+                        <div class="col-xs-4"><img class="img-center thumbnail" src="http://placehold.it/500x400" alt="thumbnail"></div>
+                        <div class="col-xs-4"><img class="img-center thumbnail" src="http://placehold.it/500x400" alt="thumbnail"></div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="prices">
+                        <div class="flex mb-3">
+                            <div class="reviews">
+                                <p class="stars">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </p>
+                                <p class="numreviews">
+                                    Read <strong>8</strong> Reviews
+                                </p>
+                            </div>
+                            <div *ngIf="products.on_sale === true" class="beforeprice">
+                                <p>{{products.price | currency:'USD':true}} </p>
+                            </div>
+                        </div>
+                        <div class="priceholder">
+                            <p *ngIf="products.on_sale === false" class="price">{{products.price | currency:'USD':true}}</p>
+                            <p *ngIf="products.on_sale === true" class="price">{{products.discount_price | currency:'USD':true}}</p>
+                        </div>
+                    </div>
+                    <div class="discount">
+                        <img src="images/pig.png" alt="Discount">
+                        <p>save {{products.salepercent}}%</p>
+                    </div>
+                    <div class="horizontal-seperator"></div>
+                    <p class="shortdesc">{{products.description}} </p>
+                    <div *ngIf="products.free_shipping == true" class="shipping-information">
+                        <img src="images/ship.png" alt="Shipping" class="shippingicon">
+                        <p class="shippingtext">Free Shipping</p>
+                    </div>
+                    <div *ngIf="products.on_stock >= 1" class="selects">
+                        <form>
+                            <div class="sizepick">
+                                <label for="size">Size:</label>
+                                <select name="size" id="size" type="number">
+                  <option value="" disabled selected>Select Size</option>
+                  <option *ngFor="let size of products.sizes" value="{{size}}">{{size}}</option>
+                </select>
+                            </div>
+                            <div class="qtypick">
+                                <label for="qty">Qty:</label>
+                                <input type="number" id="qty" name="quantity" value="1">
+                            </div>
+                        </form>
+                    </div>
+                    <p *ngIf="products.on_stock == 0" class="not-on-stock">Not on stock!</p>
+                    <button class="bevel addcart">Add to cart <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+</button>
+                    <p class="sharetext">Share This:</p>
+                    <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="container">
+        <section id="prod-tabs">
+            <div class="tabs" id="tabs">
+                <ul>
+                    <li class="tab-btn"><a href="#tabs-1">Product Overview</a></li>
+                    <li class="tab-btn"><a href="#tabs-2">Features</a></li>
+                    <li class="tab-btn"><a href="#tabs-3">Customer Review</a></li>
+                </ul>
+                <div class="tab-content" id="tabs-1">
+                    <h2>Description:</h2>
+                    <p class="description">Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin
+                        mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus
+                        lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing.
+                        Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris
+                        vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique
+                        tempus lectus.</p>
+                    <h3>Details:</h3>
+                    <p class="details">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita adipisci vitae perspiciatis saepe
+                        sed eveniet doloribus cum itaque, est nulla debitis, nam autem. Minus, quia! Nesciunt vitae voluptates
+                        iusto dolor!</p>
+                </div>
+                <div class="tab-content" id="tabs-2">
+                    <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id
+                        nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie
+                        lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula
+                        suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur
+                        ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque
+                        convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare
+                        leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+                </div>
+                <div class="tab-content" id="tabs-3">
+                    <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula
+                        accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent
+                        taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque
+                        eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur
+                        lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
+                    <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla
+                        facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti.
+                        Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget
+                        odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus,
+                        feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum.
+                        Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit
+                        hendrerit.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
 </div>

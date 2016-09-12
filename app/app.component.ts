@@ -6,6 +6,8 @@ import { RecipeListComponent } from './recipe-list.component';
 import { ProductListComponent } from './product-list.component';
 import { NewsletterComponent } from './newsletter.component';
 import { DemoDataService } from  './demo-data.service';
+import { FrontpageComponent } from './frontpage.component';
+import { CategoriesComponent } from './categories.component';
 
 @Component({
     selector: 'my-app',
@@ -15,7 +17,9 @@ import { DemoDataService } from  './demo-data.service';
     SliderComponent, 
     RecipeListComponent, 
     NewsletterComponent,
-    ProductListComponent],
+    ProductListComponent,
+    FrontpageComponent,
+    CategoriesComponent],
 
     providers: [ DemoDataService ]
 

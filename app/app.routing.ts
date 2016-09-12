@@ -5,6 +5,8 @@ import { RecipeListComponent } from './recipe-list.component';
 import { RecipeDetailsComponent } from './recipe-details.component';
 import { ProductListComponent } from './product-list.component';
 import { ProductDetailsComponent } from './product-details.component';
+import { FrontpageComponent } from './frontpage.component';
+import { ContactComponent } from './contact.component';
 
 const appRoutes: Routes = [
     {
@@ -21,7 +23,11 @@ const appRoutes: Routes = [
     },
     {
         path: '',
-        component: ProductListComponent
+        component: FrontpageComponent
+    },
+    {
+        path: 'contact',
+        component: ContactComponent
     }
 ]
 

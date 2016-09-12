@@ -48,19 +48,6 @@ console.log("hej");
 
 /// PRODUCT GALLERY ///
 
-    $('.thumbnail').on('click', function(){
-      $('.select-img').removeClass('select-img');
-      $(this).addClass('select-img');
-    });
-
-    $('.thumbnail').on('click', function() {
-    var thmb = this;
-    var src = this.src;
-    $('.big-prod-image').fadeOut(400,function(){
-        thmb.src = this.src;
-        $(this).fadeIn(400)[0].src = src;
-    });
-});
 
 /// TABS ///
 

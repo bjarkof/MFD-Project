@@ -1,0 +1,25 @@
+.contactform{
+
+    label{
+        display: block;
+        font-weight: 700;
+    }
+
+    input, textarea{
+        border-radius: 3px;
+        border: 1px solid #e6e6eb;
+    }
+
+    .ng-invalid.ng-touched{
+        border: 1px solid $red;
+    }
+
+    input{
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    textarea{
+        width: 100%;
+    }
+}

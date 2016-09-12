@@ -11,12 +11,12 @@
                 <div class="product">
                     <img src="{{product.brand}}" alt="brand">
                     <div class="image">
-                        <a href="#"><img class="product-img" src="{{product.images[0]}}" alt="product"></a>
+                        <a [routerLink]="['/productdetail', product.id]" href="#"><img class="product-img" src="{{product.images[0]}}" alt="product"></a>
                     </div>
-                    <a href="#" class="desc">{{product.name}}</a>
+                    <a [routerLink]="['/productdetail', product.id]" href="#" class="desc">{{product.name}}</a>
                     <div class="price">
-                        <button href="#" class="bevel price-amt">{{product.price | currency:'USD':true}}</button>
-                        <button href="#" class="bevel price-btn">Get now</button>
+                        <button [routerLink]="['/productdetail', product.id]" href="#" class="bevel price-amt">{{product.price | currency:'USD':true}}</button>
+                        <button [routerLink]="['/productdetail', product.id]" href="#" class="bevel price-btn">Get now</button>
                     </div>
                 </div>
             </div>

@@ -2,6 +2,7 @@ export class Product{
     id: number;
     name: string;
     description: string;
+    free_shipping: boolean;
     details: string;
     features: string;
     sizes: any[];
@@ -12,4 +13,5 @@ export class Product{
     images: string[];
     brand: string;
     on_stock: number;
+    discount_price: number;
 }

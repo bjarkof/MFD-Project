@@ -2,7 +2,7 @@ button{
   @include font-size(18px);
   color: $white;
   padding: 4.5px 20px;
-  text-transform: uppercase !important;
+  text-transform: uppercase;
   border-radius: 50px 50px 50px 50px;
   border: 1px solid #ec181f;
   background: #f23434;
@@ -101,6 +101,7 @@ button.register{
   padding: 5px 30px 5px 30px;
   border: solid #a72500 1px;
   text-decoration: none;
+  transition: 0.5s;
   background: rgba(248,80,50,1);
   background: -moz-linear-gradient(45deg, rgba(248,80,50,1) 0%, rgba(246,41,12,1) 24%, rgba(241,111,92,1) 24%, rgba(231,56,39,1) 100%);
   background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(248,80,50,1)), color-stop(24%, rgba(246,41,12,1)), color-stop(24%, rgba(241,111,92,1)), color-stop(100%, rgba(231,56,39,1)));
@@ -110,4 +111,34 @@ button.register{
   background: linear-gradient(45deg, rgba(248,80,50,1) 0%, rgba(246,41,12,1) 24%, rgba(241,111,92,1) 24%, rgba(231,56,39,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#e73827', GradientType=1 );
   align-self: flex-end;
+    &:hover{
+    color: $black;
+  }
+}
+
+button.addcart{
+  border-radius: 5px;
+  font-family: Arial;
+  color: #ffffff;
+  @include font-size(22px);
+  padding: 5px 30px 5px 30px;
+  border: solid #a72500 1px;
+  text-decoration: none; 
+  text-transform: none;
+  margin-left: auto;
+  margin-bottom: 38px;
+  display: block;
+  transition: 0.5s; 
+  background: rgba(248,80,50,1);
+  background: -moz-linear-gradient(45deg, rgba(248,80,50,1) 0%, rgba(246,41,12,1) 24%, rgba(241,111,92,1) 24%, rgba(231,56,39,1) 100%);
+  background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(248,80,50,1)), color-stop(24%, rgba(246,41,12,1)), color-stop(24%, rgba(241,111,92,1)), color-stop(100%, rgba(231,56,39,1)));
+  background: -webkit-linear-gradient(45deg, rgba(248,80,50,1) 0%, rgba(246,41,12,1) 24%, rgba(241,111,92,1) 24%, rgba(231,56,39,1) 100%);
+  background: -o-linear-gradient(45deg, rgba(248,80,50,1) 0%, rgba(246,41,12,1) 24%, rgba(241,111,92,1) 24%, rgba(231,56,39,1) 100%);
+  background: -ms-linear-gradient(45deg, rgba(248,80,50,1) 0%, rgba(246,41,12,1) 24%, rgba(241,111,92,1) 24%, rgba(231,56,39,1) 100%);
+  background: linear-gradient(45deg, rgba(248,80,50,1) 0%, rgba(246,41,12,1) 24%, rgba(241,111,92,1) 24%, rgba(231,56,39,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#e73827', GradientType=1 );
+
+  &:hover{
+    color: $black;
+  }
 }
